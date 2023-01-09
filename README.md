@@ -1,5 +1,5 @@
 # Youtube-Clon-2
-2do clon de Youtube (HTML, CSS FLEX/GRID &amp; JS)
+Clon de Youtube (HTML, CSS y JavaScript)
 
 
 
