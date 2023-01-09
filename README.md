@@ -1,4 +1,4 @@
-# Youtube-Clon-2
+# Youtube-Clon
 Clon de Youtube (HTML, CSS y JavaScript)
 
 
