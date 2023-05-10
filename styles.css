@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Fondo de categorias */
+    --fondo-gray: hsla(0, 0%, 95%, 1);
+
+    /* Fondo hover categorias, sidebar e iconos*/
+    --fondo-hover: hsla(0, 0%, 90%, 1);
+
+    /*Color para nombre de canal y vistas de YT*/
+    --channel-name-color: hsla(0, 0%, 35%, 1);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 68px auto;
+    grid-template-rows: 60px auto;
+    grid-template-areas: "header header"
+                         "sidebar main";
+    transition: all .4s ease;
+}
+
+.container.active {
+    grid-template-columns: 220px auto;
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.main {
+    grid-area: main;
+}
+
+.fa-solid {
+    color: black;
+}
+
+.fa-regular {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+/* *---- ---- ---- ----Header---- ---- ---- */
+.header {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    grid-template-areas: "header1 header2 header3";
+}
+
+.header1 {
+    grid-area: header1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header2 {
+    grid-area: header2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.header3 {
+    padding-right: 24px;
+    grid-area: header3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container_logo-img {
+    width: 108px;
+}
+
+.logo-container_menu-button {
+    margin-right: 16px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.fa-bars {
+    font-size: 18px;
+}
+
+.buscador {
+    min-width: 59%;
+    height: 41px;
+    padding: 0 20px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 50px 0 0 50px;
+    border: 1px solid var(--fondo-hover);
+    outline: none;
+}
+
+.button-lupa {
+    width: 60px;
+    height: 41px;
+    border-radius: 0 50px 50px 0;
+    border: 1px solid var(--fondo-hover);
+    border-left: none;
+    background-color: hsla(0, 0%, 98%, 1);
+}
+
+.fa-magnifying-glass {
+    font-size: 1.7rem;
+}
+
+.a-mic-container {
+    margin: 0 0 1px 8px;
+    width: 41px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    background-color: hsla(0, 0%, 98%, 1);
+}
+
+.cam,
+.bell {
+    margin: 0 6px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.usuario-img {
+    margin-left: 14px;
+    border-radius: 50%;
+}
+
+
+
+
+/* *---- ---- ---- ----Sidebar---- ---- ---- */
+.sidebar {
+    padding: 8px 0 16px 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.home-a {
+    font-weight: 700;
+    background-color: var(--fondo-gray);
+}
+
+.sidebar_a {
+    min-width: 219px;
+    height: 38px;
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 11px;
+    color: black;
+    font-size: 1.4rem;
+}
+
+.sidebar_i  {
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.fa-tv {
+    margin-right: 18px;
+    font-size: 20px;
+}
+
+.sidebar_bolt,
+.fa-clock-rotate-left,
+.fa-circle-play,
+.fa-clock,
+.fa-thumbs-up {
+    margin-right: 24px;
+    font-size: 20px;
+}
+
+.fa-arrow-down {
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+hr {
+    margin: 12px 0;
+    width: 95%;
+    border: 1px solid var(--fondo-hover);
+}
+
+/* ?---- ----Suscripciones---- ---- */
+.suscripciones-p,
+.explorador-p {
+    margin: 5px 0 10px 12px;
+}
+
+.suscripciones-a {
+    min-width: 230px;
+    height: 38px;
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 11px;
+    color: black;
+    font-size: 1.4rem;
+}
+
+.suscripciones-img {
+    margin-right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.nueve-mas {
+    min-width: 200px;
+    height: 38px;
+    padding: 20px 16px 20px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 11px;
+    color: black;
+    font-size: 1.4rem;
+}
+
+/* ?---- ----Explorador---- ---- */
+/* .explorador-a {
+    min-width: 230px;
+    height: 38px;
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 11px;
+    color: black;
+    font-size: 1.4rem;
+}
+
+.explorador-i {
+    font-size: 2rem;
+    margin-right: 25px;
+}
+
+.fa-gamepad {
+    margin-right: 20px;
+    font-size: 2rem;
+}
+
+.fa-trophy {
+    margin-right: 22px;
+    font-size: 2rem;
+}
+
+.fa-lightbulb {
+    margin-right: 26px;
+    padding-left: 3px;
+    font-size: 2rem;
+} */
+
+/* ?---- ----Mas de Youtube---- ---- */
+/* .mas-div .mas-a,
+.config-a {
+    margin: 0 0 0 -2px;
+    min-width: 230px;
+    height: 38px;
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 11px;
+    color: black;
+    font-size: 1.4rem;
+}
+
+.mas-p {
+    margin: 5px 0 6px 12px;
+}
+
+.mas-i {
+    margin-right: 20px;
+    color: red;
+    font-size: 2rem;
+}
+
+.fa-child-reaching {
+    margin-right: 26px;
+    color: red;
+    font-size: 2rem;
+}
+
+.fa-tv {
+    margin-right: 20px;
+    color: red;
+    font-size: 1.7rem;
+} */
+
+/* ?---- ----Configuracion---- ---- */
+.config-a {
+    margin: 0 0 0 -2px;
+    min-width: 230px;
+    height: 38px;
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 11px;
+    color: black;
+    font-size: 1.4rem;
+}
+.config-i {
+    margin-right: 20px;
+    font-size: 2rem;
+}
+
+.fa-flag {
+    margin-right: 24px;
+    font-size: 2rem;
+}
+
+
+
+/* *---- ---- ---- ----Main---- ---- ---- */
+main {
+    padding: 8px 44px;
+}
+
+.category-container {
+    display: flex;
+}
+
+.category-container .todos {
+    margin: 0 6px 0 0;
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    color: white;
+    background-color: black;
+}
+
+.category-container .p {
+    margin: 0 6px;
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    color: hsla(0, 0%, 20%, 1);
+    background-color: var(--fondo-gray);
+}
+
+.right-arrow {
+    margin-right: -45px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+
+/* ?---- ---- Videos ---- ---- */
+.videos-section {
+    padding: 14px 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px 14px;
+}
+.video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video .video-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.channel-div {
+    margin: 7px 0;
+    display: flex;
+}
+
+.channel-img {
+    margin: 0 12px 0 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.channel-div a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: black;
+}
+
+.channel-name-div {
+    display: flex;
+    flex-direction: column;
+}
+.channel-name-div a {
+    margin: 0 0 4px 0;
+    padding-left: 48px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--channel-name-color);
+}
+
+.punto {
+    margin: 4px 5px 0 5px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: var(--channel-name-color);
+}
+
+.a-vistas {
+    display: flex;
+}
+
+
+
+
+/* ?---- ---- ---- ----Hover---- ---- ---- */
+.logo-container_menu-button:hover,
+.button-lupa:hover,
+.a-mic-container:hover,
+.cam:hover,
+.bell:hover,
+.sidebar_a:hover,
+.suscripciones-a:hover,
+.nueve-mas:hover,
+.explorador-a:hover,
+.mas-a:hover,
+.config-a:hover {
+    cursor: pointer;
+    background-color: var(--fondo-hover);
+}
+
+.usuario-img:hover {
+    cursor: pointer;
+}
+
+.category-container .p:hover,
+.right-arrow:hover {
+    background-color: var(--fondo-hover);
+}
+
+.channel-name:hover {
+    color: hsla(0, 0%, 20%, 1);
+}
+
+.video-img:hover {
+    transform: scale(1.2);
+    transition: 0.8s 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+
+
+
+/* !---- ---- ---- ----Media Queries---- ---- ---- */

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Icons/youtube_logo_icon32.png">
+    <title>Youtube Clon</title>
+</head>
+<body>
+
+    <div class="container active" id="container"> <!--Contenedor principal-->
+
+    <!-- *---- ---- ---- ----Header---- ---- ---- ----  -->
+        <header class="header">
+            <!-- ?---- ----Menu & Logo---- ---- -->
+            <div class="header_logo-container header1">
+                <button class="logo-container_menu-button" id="menu-button">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <a href="https://www.youtube.com/">
+                    <img class="logo-container_logo-img" src="/imagen-del-logo/Youtube-logo-img.png" alt="">
+                </a>
+            </div>
+
+            <!-- ?---- ----Barra Buscadora---- ---- -->
+            <div class="header2">
+                <input class="buscador" type="text" placeholder="Buscar">
+
+                <button class="button-lupa">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                
+                <a class="a-mic-container" href="#">
+                    <i class="fa-solid fa-microphone"></i>
+                </a>
+            </div>
+
+            <!-- ?---- ----Seccion de Usuario---- ---- -->
+            <div class="header3">
+                <a class="cam" href="#">
+                    <i class="fa-solid fa-video"></i>
+                </a>
+
+                <a class="bell" href="#">
+                    <i class="fa-regular fa-bell"></i>
+                </a>
+
+                <img class="usuario-img" height="32" width="32" src="https://yt3.ggpht.com/yti/AJo0G0kfmpA5LTiy_uoFhiibAENhC-Wo-RqQcPB5xXuoIQ=s88-c-k-c0x00ffffff-no-rj-mo">
+            </div>       
+        </header>
+
+    <!-- *---- ---- ---- ----SideBar---- ---- ---- ----  -->
+        <nav class="sidebar">
+
+            <!-- !-----Opciones principales----- -->
+            <a class="sidebar_a home-a" href=""><i class="sidebar_i fa-sharp fa-solid fa-house"></i>Principal</a>
+
+            <a class="sidebar_a" href=""><i class="sidebar_bolt fa-solid fa-bolt"></i> Shorts</a>
+
+            <a class="sidebar_a" href=""><i class="fa-solid fa-tv"></i>Suscripciones</a>
+
+            <hr>
+
+            <a class="sidebar_a" href=""><i class="sidebar_i fa-solid fa-photo-film"></i>Biblioteca</a>
+
+            <a class="sidebar_a" href=""><i class="fa-solid fa-clock-rotate-left"></i>Historial</a>
+
+            <a class="sidebar_a" href=""><i class="fa-solid fa-circle-play"></i>Tus videos</a>
+
+            <a class="sidebar_a" href=""><i class="fa-solid fa-clock"></i>Ver mas tarde</a>
+
+            <a class="sidebar_a" href=""><i class="fa-solid fa-thumbs-up"></i>Videos que me gusta...</a>
+
+            <a class="sidebar_a" href=""><i class="fa-solid fa-arrow-down"></i>Mostrar mas</a>
+
+            <hr>
+
+            
+            <!-- !-----Parte de Suscipciones----- -->
+            <div class="hide" id="hide">
+                <p class="suscripciones-p" id="suscripciones">Suscripciones</p>
+                <a class="suscripciones-a" href="https://www.youtube.com/@Faide">
+                    <img class="suscripciones-img" src="/imagenes-de-canales/Faide.jpg" alt="">Faide
+                </a>
+
+                <a class="suscripciones-a" href="https://www.youtube.com/@FaztTech">
+                    <img class="suscripciones-img" src="/imagenes-de-canales/Fazt.jpg" alt="">Fazt
+                </a>
+
+                <a class="suscripciones-a" href="https://www.youtube.com/@unpocomejor2938">
+                    <img class="suscripciones-img" src="/imagenes-de-canales/unpocomejor.jpg" alt="">Un Poco Mejor
+                </a>
+
+                <a class="suscripciones-a" href="https://www.youtube.com/@FalconMasters">
+                    <img class="suscripciones-img" src="/imagenes-de-canales/falconmaster.jpg" alt="">FalconMasters
+                </a>
+
+                <a class="suscripciones-a" href="https://www.youtube.com/@cinexplicacion7709">
+                    <img class="suscripciones-img" src="/imagenes-de-canales/cinexplicacion.jpg" alt="">Cinexplicacion
+                </a>
+
+                <a class="suscripciones-a" href="https://www.youtube.com/@CodingTube">
+                    <img class="suscripciones-img" src="/imagenes-de-canales/codingtube.jpg" alt="">CodingTube
+                </a>
+
+                <a class="suscripciones-a" href="https://www.youtube.com/@vidamrr">
+                    <img class="suscripciones-img" src="/imagenes-de-canales/vidamrr.jpg" alt="">Vida MRR - Programa...
+                </a>
+                
+                <a class="suscripciones-a" href="https://www.youtube.com/@LearnEnglishWithTVSeries">
+                    <img class="suscripciones-img" src="/imagenes-de-canales/Learn English With TV Series.jpg" alt="">Learn English With TV...
+                </a>
+                <a class="suscripciones-a" href="https://www.youtube.com/@freecodecamp">
+                    <img class="suscripciones-img" src="/imagenes-de-canales/freecodecamp.jpg" alt="">freeCodeCamp.org
+                </a>
+
+                <a class="nueve-mas" href="#"><i class="fa-solid fa-arrow-down"></i>Mostrar 9 mas</a>
+            </div>
+
+            <hr>
+
+            <!-- !-----Parte de Explorar----- -->
+            <!-- <div class="explorar-div">
+                <p class="explorador-p">Explorar</p>
+
+                <a class="explorador-a" href="">
+                    <i class="explorador-i fa-sharp fa-solid fa-fire-flame-curved"></i>Tendencias
+                </a>
+
+                <a class="explorador-a" href="">
+                    <i class="explorador-i fa-solid fa-music"></i>Musica
+                </a>
+
+                <a class="explorador-a" href="">
+                    <i class="fa-solid fa-gamepad"></i>Videojuegos
+                </a>
+
+                <a class="explorador-a" href="">
+                    <i class="fa-solid fa-trophy"></i>Deportes
+                </a>
+
+                <a class="explorador-a" href="">
+                    <i class="fa-solid fa-lightbulb"></i>Aprendizaje
+                </a>
+            </div> -->
+
+            <!-- <hr> -->
+
+            <!-- !-----Parte de Config----- -->
+            <!-- <div class="mas-div">
+
+                <p class="mas-p">Mas de YouTube</p>
+
+                <a class="mas-a" href="">
+                    <i class="mas-i fa-brands fa-youtube"></i>
+                    YouTube Premium
+                </a>
+
+                <a class="mas-a" href="">
+                    <i class="mas-i fa-brands fa-creative-commons-sampling-plus"></i>
+                    Creator Studio
+                </a>
+
+                <a class="mas-a" href="">
+                    <i class="mas-i fa-solid fa-circle-play"></i>
+                    YouTube Music
+                </a>
+
+                <a class="mas-a" href="">
+                    <i class="fa-sharp fa-solid fa-child-reaching"></i>
+                    YouTube Kids
+                </a>
+
+                <a class="mas-a" href="">
+                    <i class="fa-sharp fa-solid fa-tv"></i>
+                    YouTube TV
+                </a>
+            </div> -->
+
+            <!-- <hr> -->
+
+            <!-- !-----Parte de Config----- -->
+            <div class="config-div" id="hide">
+                <a class="config-a" href="#">
+                    <i class="config-i fa-solid fa-gear"></i>
+                    Configuracion
+                </a>
+
+                <a class="config-a" href="#">
+                    <i class="fa-solid fa-flag"></i>
+                    Historial de denuncias
+                </a>
+
+                <a class="config-a" href="#">
+                    <i class="config-i fa-solid fa-circle-question"></i>
+                    Ayuda
+                </a>
+
+                <a class="config-a" href="#">
+                    <i class="config-i fa-solid fa-circle-exclamation"></i>
+                    Enviar commentarios
+                </a>
+            </div>
+        </nav>
+
+    <!-- *---- ---- ---- ----Main---- ---- ---- ----  -->
+        <main class="main">
+            <div class="category-container">
+                <a href="">
+                    <p class="todos">Todos</p>
+                </a>
+
+                <a href="">
+                    <p class="p">Apex Legends</p>
+                </a>
+
+                <a href="">
+                    <p class="p">Musica</p>
+                </a>
+
+                <a href="">
+                    <p class="p">Lo-fi</p>
+                </a>
+
+                <a href="">
+                    <p class="p">Volleyball</p>
+                </a>
+
+                <a href="">
+                    <p class="p">Programacion</p>
+                </a>
+
+                <a href="">
+                    <p class="p">Desarrollo web</p>
+                </a>
+
+                <a href="">
+                    <p class="p">Tecnologia</p>
+                </a>
+
+                <a href="">
+                    <p class="p">Metal simphonyc</p>
+                </a>
+
+                <!-- <a href="">
+                    <p class="p">Mixes</p>
+                </a> -->
+
+                <a href="">
+                    <p class="p">JavaScript</p>
+                </a>
+
+                <a class="right-arrow" href="">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+
+
+
+
+
+                
+
+            </div>
+
+            
+            <div class="videos-section"> <!-- inicio videos section -->
+
+                    <!-- !-----Parte#1----- -->
+                <!-- ?--- --- Video#1 --- --- -->
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=1fTuqbR8UIc">
+                        <img class="video-img" src="/imagenes-de-videos/Music to put you in a better mood - lofi relax stress relief.jpg" alt="">
+                    </a>
+
+                    <div class="channel-div">
+                        <a href="https://www.youtube.com/@lofizone2168">
+                            <img class="channel-img" src="/imagenes-de-canales/Lo-fi zone.jpg" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=1fTuqbR8UIc">Música para ponerte en un mejor estado de ánimo...</a>
+                    </div>
+
+                    <div class="channel-name-div">
+
+                        <a class="channel-name" href="https://www.youtube.com/@lofizone2168">Lofi Zone</a>
+
+                        <a class="a-vistas" href="https://www.youtube.com/watch?v=1fTuqbR8UIc">376,030 vistas <div class="punto"></div> hace 3 meses</a>
+                    </div>
+                </div>
+
+                <!-- ?--- --- Video#2 --- --- -->
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=h5nDeMvPJZE">
+                        <img class="video-img" src="/imagenes-de-videos/ARCH ENEMY – The Watcher (OFFICIAL VIDEO) (BQ).jpg" alt="">
+                    </a>
+
+                    <div class="channel-div">
+                        <a href="https://www.youtube.com/channel/UCIPN3XIDtyAVP6GWYsE7pQQ">
+                            <img class="channel-img" src="/imagenes-de-canales/Arch anemy.jpg" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=h5nDeMvPJZE">ARCH ENEMY – The Watcher (OFFICIAL VIDEO)</a>
+                    </div>
+
+                    <div class="channel-name-div">
+                        <a class="channel-name" href="">Arch Enemy</a>
+
+                        <a class="a-vistas" href="">3.8 M de vistas <div class="punto"></div> hace 4 meses</a>
+                    </div>
+                </div>
+
+                <!-- ?--- --- Video#3 --- --- -->
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=bQmzk05I3nw&t=120s">
+                        <img class="video-img" src="/imagenes-de-videos/Australia 4K - Scenic Relaxation Film With Calming Music (BQ).jpg" alt="">
+                    </a>
+
+                    <div class="channel-div">
+                        <a href="https://www.youtube.com/@ScenicRelaxationFilms">
+                            <img class="channel-img" src="/imagenes-de-canales/relax.jpg" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=bQmzk05I3nw&t=120s">Australia 4K - Scenic Relaxation Film With Calming Music</a>
+                    </div>
+
+                    <div class="channel-name-div">
+                        <a class="channel-name" href="https://www.youtube.com/@ScenicRelaxationFilms">Scenic Relaxation</a>
+
+                        <a class="a-vistas" href="https://www.youtube.com/watch?v=bQmzk05I3nw&t=120s">818,074 vistas <div class="punto"></div> hace 1 año</a>
+                    </div>
+                </div>
+
+                <!-- ?--- --- Video#4 --- --- -->
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=t9GR1FDDE_o">
+                        <img class="video-img" src="/imagenes-de-videos/De los humildes comienzos al éxito mundial_ El inolvidable viaje de Nike _ Phil Knight (BQ).jpg" alt="">
+                    </a>
+
+                    <div class="channel-div">
+                        <a href="https://www.youtube.com/@unpocomejor2938">
+                            <img class="channel-img" src="/imagenes-de-canales/unpocomejor.jpg" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=t9GR1FDDE_o">De los humildes comienzos al éxito mundial: El inolvidable viaje de Nike // Phil Knight</a>
+                    </div>
+
+                    <div class="channel-name-div">
+                        <a class="channel-name" href="https://www.youtube.com/@unpocomejor2938">Un Poco Mejor</a>
+
+                        <a class="a-vistas" href="https://www.youtube.com/watch?v=t9GR1FDDE_o">22,594 vistas <div class="punto"></div> hace 1 mes</a>
+                    </div>
+                </div>
+
+
+                    <!-- !-----Parte#2----- -->
+                <!-- ?--- --- Video#5 --- --- -->
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=dNoTvg0t52c">
+                        <img class="video-img" src="/imagenes-de-videos/EPICA - Storm The Sorrow (OFFICIAL VIDEO) (BQ).jpg" alt="">
+                    </a>
+
+                    <div class="channel-div">
+                        <a href="https://www.youtube.com/channel/UC82lIgiaLTBkzhEebHWoazA">
+                            <img class="channel-img" src="/imagenes-de-canales/epica.jpg" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=dNoTvg0t52c">EPICA - Storm The Sorrow (OFFICIAL VIDEO)</a>
+                    </div>
+
+                    <div class="channel-name-div">
+                        <a class="channel-name" href="https://www.youtube.com/channel/UC82lIgiaLTBkzhEebHWoazA">EPICA</a>
+
+                        <a class="a-vistas" href="https://www.youtube.com/watch?v=dNoTvg0t52c">22 M de vistas <div class="punto"></div> hace 10 años</a>
+                    </div>
+                </div>
+
+                <!-- ?--- --- Video#6 --- --- -->
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=67PeUSAJqnc">
+                        <img class="video-img" src="/imagenes-de-videos/Epica Once upon a Nightmare - Sottotitoli Italiano (BQ).jpg" alt="">
+                    </a>
+
+                    <div class="channel-div">
+                        <a href="https://www.youtube.com/channel/UC82lIgiaLTBkzhEebHWoazA">
+                            <img class="channel-img" src="/imagenes-de-canales/epica.jpg" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=67PeUSAJqnc">Epica Once upon a Nightmare - Sottotitoli Italiano</a>
+                    </div>
+
+                    <div class="channel-name-div">
+                        <a class="channel-name" href="https://www.youtube.com/channel/UC82lIgiaLTBkzhEebHWoazA">EPICA</a>
+
+                        <a class="a-vistas" href="https://www.youtube.com/watch?v=67PeUSAJqnc">15,836 vistas <div class="punto"></div> hace 11 meses</a>
+                    </div>
+                </div>
+
+                <!-- ?--- --- Video#7 --- --- -->
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=teYFBk1LbpM&t=917s">
+                        <img class="video-img" src="/imagenes-de-videos/How I Became The Ranked.jpg" alt="">
+                    </a>
+
+                    <div class="channel-div">
+                        <a href="https://www.youtube.com/@Faide">
+                            <img class="channel-img" src="/imagenes-de-canales/Faide.jpg" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=teYFBk1LbpM&t=917s">How I Became The Ranked #1 Apex Solo Player...</a>
+                    </div>
+
+                    <div class="channel-name-div">
+                        <a class="channel-name" href="https://www.youtube.com/@Faide">Faide</a>
+
+                        <a class="a-vistas" href="https://www.youtube.com/watch?v=teYFBk1LbpM&t=917s">282,374 vistas <div class="punto"></div> hace 2 semanas</a>
+                    </div>
+                </div>
+
+                <!-- ?--- --- Video#8 --- --- -->
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=SR5GxoFhIAU&t=200s">
+                        <img class="video-img" src="/imagenes-de-videos/HTML _ CSS Tutorial – Create an Order Summary Component (BQ).jpg" alt="">
+                    </a>
+
+                    <div class="channel-div">
+                        <a href="https://www.youtube.com/@freecodecamp">
+                            <img class="channel-img" src="/imagenes-de-canales/freecodecamp.jpg" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=SR5GxoFhIAU&t=200s">HTML / CSS Tutorial – Create an Order Summary Component</a>
+                    </div>
+
+                    <div class="channel-name-div">
+                        <a class="channel-name" href="https://www.youtube.com/@freecodecamp">freeCodeCamp.org</a>
+
+                        <a class="a-vistas" href="https://www.youtube.com/watch?v=SR5GxoFhIAU&t=200s">117,105 vistas <div class="punto"></div> hace 4 meses</a>
+                    </div>
+                </div>
+
+
+                    <!-- !-----Parte#3----- -->
+                <!-- ?--- --- Video#9 --- --- -->
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=V7IBWsUnZHY">
+                        <img class="video-img" src="/imagenes-de-videos/Japan Has Made One of the Most Legendary Victories in Volleyball Nations League 2022 !!! (BQ).jpg" alt="">
+                    </a>
+
+                    <div class="channel-div">
+                        <a href="https://www.youtube.com/@powervolleyballofficial">
+                            <img class="channel-img" src="/imagenes-de-canales/powevolley.jpg" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=V7IBWsUnZHY">Japan Has Made One of the Most Legendary Victories in Volleyball Nations League...</a>
+                    </div>
+
+                    <div class="channel-name-div">
+                        <a class="channel-name" href="https://www.youtube.com/@powervolleyballofficial">Power Volleyball</a>
+
+                        <a class="a-vistas" href="https://www.youtube.com/watch?v=V7IBWsUnZHY">376,030 vistas <div class="punto"></div> hace 3 mesess</a>
+                    </div>
+                </div>
+
+                <!-- ?--- --- Video#10 --- --- -->
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=6Q21YZ06F_I&t=2s">
+                        <img class="video-img" src="/imagenes-de-videos/Lenguajes de Programación para aprender este 2023 (BQ).jpg" alt="">
+                    </a>
+
+                    <div class="channel-div">
+                        <a href="https://www.youtube.com/@FaztTech">
+                            <img class="channel-img" src="/imagenes-de-canales/Fazt.jpg".jpg" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=6Q21YZ06F_I&t=2s">Lenguajes de Programación para aprender este 2023</a>
+                    </div>
+
+                    <div class="channel-name-div">
+                        <a class="channel-name" href="https://www.youtube.com/@FaztTech">Fazt</a>
+
+                        <a class="a-vistas" href="https://www.youtube.com/watch?v=6Q21YZ06F_I&t=2s">376,030 vistas <div class="punto"></div> hace 3 mesess</a>
+                    </div>
+                </div>
+
+                <!-- ?--- --- Video#11 --- --- -->
+                <div class="video">
+                    <a href=https://www.youtube.com/watch?v=gEPFBcuJhTk&t=2629s">
+                        <img class="video-img" src="/imagenes-de-videos/RAINING ON ＳＴＲＥＥＴ (Lofi HipHop) (BQ).jpg" alt="">
+                    </a>
+
+                    <div class="channel-div">
+                        <a href="https://www.youtube.com/@lofizone2168">
+                            <img class="channel-img" src="/imagenes-de-canales/Lo-fi zone.jpg" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=gEPFBcuJhTk&t=2629s">RAINING ON ＳＴＲＥＥＴ (Lofi HipHop)</a>
+                    </div>
+
+                    <div class="channel-name-div">
+
+                        <a class="channel-name" href="https://www.youtube.com/@lofizone2168">Lofi Zone</a>
+
+                        <a class="a-vistas" href="https://www.youtube.com/watch?v=gEPFBcuJhTk&t=2629s">173,020 vistas <div class="punto"></div> hace 1 mes</a>
+                    </div>
+                </div>
+
+                <!-- ?--- --- Video#12 --- --- -->
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=kows4NFfr-8&t=2s">
+                        <img class="video-img" src="/imagenes-de-videos/Ran Takahashi _ 19 Years Old Monster of the Vertical Jump _ Men's VNL 2021 (BQ).jpg" alt="">
+                    </a>
+
+                    <div class="channel-div">
+                        <a href="https://www.youtube.com/@powervolleyballofficial">
+                            <img class="channel-img" src="/imagenes-de-canales/powevolley.jpg" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=kows4NFfr-8&t=2s">Ran Takahashi | 19 Years Old Monster of the Vertical Jump | Men's VNL 2021</a>
+                    </div>
+
+                    <div class="channel-name-div">
+                        <a class="channel-name" href="https://www.youtube.com/@powervolleyballofficial">Power Volleyball</a>
+
+                        <a class="a-vistas" href="https://www.youtube.com/watch?v=kows4NFfr-8&t=2s">595,632 vistas <div class="punto"></div> hace 1 año</a>
+                    </div>
+                </div>
+
+
+                    <!-- !-----Parte#4----- -->
+                <!-- ?--- --- Video#13 --- --- -->
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=YbrjCOBsA6o&t=16s">
+                        <img class="video-img" src="/imagenes-de-videos/The Final Scene of FRIENDS — Fun English Lesson (BQ).jpg" alt="">
+                    </a>
+
+                    <div class="channel-div">
+                        <a href="https://www.youtube.com/@LearnEnglishWithTVSeries">
+                            <img class="channel-img" src="/imagenes-de-canales/Learn English With TV Series.jpg" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=YbrjCOBsA6o&t=16s">The Final Scene of FRIENDS — Fun English Lesson</a>
+                    </div>
+
+                    <div class="channel-name-div">
+                        <a class="channel-name" href="https://www.youtube.com/@LearnEnglishWithTVSeries">Learn English With TV Series</a>
+
+                        <a class="a-vistas" href="https://www.youtube.com/watch?v=YbrjCOBsA6o&t=16s">91,535 vistas <div class="punto"></div> hace 4 meses</a>
+                    </div>
+                </div>
+
+                <!-- ?--- --- Video#14 --- --- -->
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=k6GwB_Jq7e4&t=6560s">
+                        <img class="video-img" src="/imagenes-de-videos/WHEN I SWORE TO PROTECT YOU _ Epic Dramatic Music _ Powerful Epic Emotional Music (BQ).jpg" alt="">
+                    </a>
+
+                    <div class="channel-div">
+                        <a href="https://www.youtube.com/@vnepicmusic4369">
+                            <img class="channel-img" src="/imagenes-de-canales/VN epic.jpg" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=k6GwB_Jq7e4&t=6560s">WHEN I SWORE TO PROTECT YOU | Epic Dramatic Music | Powerful Epic Emotional...</a>
+                    </div>
+
+                    <div class="channel-name-div">
+                        <a class="channel-name" href="https://www.youtube.com/@vnepicmusic4369">VN Epic Music</a>
+
+                        <a class="a-vistas" href="https://www.youtube.com/watch?v=k6GwB_Jq7e4&t=6560s">99,572 vistas <div class="punto"></div> hace 4 meses</a>
+                    </div>
+                </div>
+
+                <!-- ?--- --- Video#15 --- --- -->
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=M6lSZZOYi-c&t=1s">
+                        <img class="video-img" src="/imagenes-de-videos/What Level is My English_ — Learn with THE BIG BANG THEORY (BQ).jpg" alt="">
+                    </a>
+
+                    <div class="channel-div">
+                        <a href="https://www.youtube.com/@LearnEnglishWithTVSeries">
+                            <img class="channel-img" src="/imagenes-de-canales/Learn English With TV Series.jpg" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=M6lSZZOYi-c&t=1s">What Level is My English? — Learn with THE BIG BANG THEORY</a>
+                    </div>
+
+                    <div class="channel-name-div">
+                        <a class="channel-name" href="https://www.youtube.com/@LearnEnglishWithTVSeries">Learn English With TV Series</a>
+
+                        <a class="a-vistas" href="https://www.youtube.com/watch?v=M6lSZZOYi-c&t=1s">103,371 vistas <div class="punto"></div> hace 2 meses</a>
+                    </div>
+                </div>
+
+                <!-- ?--- --- Video#16 --- --- -->
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=wcoDA9zh-D8&t=4829s">
+                        <img class="video-img" src="/imagenes-de-videos/Winter Lofi Vibes ❄️Lofi music _ Study Music ~ Beats to study _ Chill to (BQ).jpg" alt="">
+                    </a>
+
+                    <div class="channel-div">
+                        <a href="https://www.youtube.com/@lofizone2168">
+                            <img class="channel-img" src="/imagenes-de-canales/Lo-fi zone.jpg" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=wcoDA9zh-D8&t=4829s">Invierno Lofi Vibes ❄️lofi Music | Estudiar música ~ ritmos para estudiar</a>
+                    </div>
+
+                    <div class="channel-name-div">
+                        <a class="channel-name" href="https://www.youtube.com/@lofizone2168">Lofi Zone</a>
+
+                        <a class="a-vistas" href="https://www.youtube.com/watch?v=wcoDA9zh-D8&t=4829s">56,282 vistas <div class="punto"></div> hace 4 semanas</a>
+                    </div>
+                </div>
+
+            </div> <!-- cierre videos section -->
+        </main>
+    </div> <!--Cierre contenedor principal-->
+
+    <script src="https://kit.fontawesome.com/b6cacbd2b0.js" crossorigin="anonymous"></script>
+    <script src="/main.js"></script>
+</body>
+</html>
